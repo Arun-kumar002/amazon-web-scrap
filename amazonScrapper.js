@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 
-const getData = async (searchTerm: string): Promise<{}[]> => {
+const getData = async (searchTerm) => {
   // Send GET Request
   const response = await (
     await axios.get(`https://www.amazon.in/s?k=${searchTerm}`, {
@@ -44,4 +44,6 @@ const getData = async (searchTerm: string): Promise<{}[]> => {
   return data;
 };
 
-getData("honey");
+getData("mobile");
+
+
